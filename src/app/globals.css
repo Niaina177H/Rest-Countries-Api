@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply h-full w-full;
+}
+#root{
+    height: 100vh;
+    width: 100vw;
+    @apply md:overflow-hidden xs:overflow-hidden;
+}
+.ulhidedropdownclasse{
+    display: none;
+}
+.ulshowdropdownclasse{
+    display: block;
+}
+#header, #main-content{
+    @apply xs:px-4 md:px-8 xl:px-12;
+}
+#main-content{
+    height: calc(100vh - 65px);
+    @apply flex flex-col xs:overflow-auto;
+}
+#header{
+    @apply flex justify-between xs:items-start md:items-center shadow-md;
+    @apply xs:mb-4 xs:pt-3 h-[51px] md:pt-0;
+}
+#main-header{
+    @apply xs:h-[150px] sm:h-auto pt-4;
+    @apply flex xs:flex-col xs:gap-3 justify-between xs:mb-5 sm:items-center;
+    @apply sm:flex-row;
+}
+#main-header input{
+    @apply bg-transparent h-full;
+}
+#search-interactive{
+    @apply xs:w-full sm:w-3/6 md:w-1/2 lg:w-[470px];
+}
+#search-filter{
+    @apply xs:h-[50px] xs:w-3/6 sm:h-[55px] sm:w-2/6 md:w-[200px];
+}
+#search-filter ul{
+    @apply z-20 relative;
+}
+#search-filter li, #search-filter button{
+    @apply xs:pl-8;
+}
+#main-container-card{
+    @apply grid relative place-items-center gap-y-12 xs:text-sm text-base;
+    @apply xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-8 h-auto md:overflow-y-auto;
+}
+.card-items{
+    @apply xs:w-[80%] sm:w-[230px] h-[300px] md:w-[224px] flex flex-col items-center gap-5 overflow-hidden relative;
+}
+.card-items img, .card-description{
+    width: 100%!important;
+    height: 50%;
+}
+.card-items img{
+    object-fit: cover;
+}
+.card-description{
+    @apply pl-[8px] overflow-x-hidden text-nowrap w-auto;
+}
+.card-description h2{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @apply font-bold text-lg pl-6;
+}
+
+.items-darker{
+    @apply bg-subdarker;
+}
+.items-lighter{
+    @apply bg-sublighter;
+}
+.container-darker{
+    @apply bg-darker text-darker;
+}
+.container-lighter{
+    @apply bg-lighter text-lighter;
+}
+#country-detail h1{
+    @apply leading-loose text-2xl font-bold mb-4;
+}
+#detail-backup{
+    @apply shadow-lg py-1 xs:w-[120px] md:w-[170px] mt-8 rounded-md xs:text-sm;
+    @apply xs:mb-4 md:mb-10;
+}
+.border-country-btn{
+    @apply shadow-lg px-5 py-1 mx-1 my-1 rounded-md md:w-[130px] xs:w-[80px] xs:text-xs md:text-sm;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#country-detail{
+    width: 100%;
+    top: 55px;
+    position: absolute;
+    left: 0;
+    @apply xs:px-6 md:px-8 xl:px-12;
+    @apply flex flex-col gap-2 xs:h-auto md:h-md-auto;
+}
+#description-container{
+    @apply flex xs:flex-col md:flex-row md:gap-x-6 xl:gap-x-12 relative md:justify-center md:items-center;
+}
+#description-container img{
+    @apply xs:w-full md:h-[210px] lg:h-[250px] xl:h-[270px] xs:shadow-lg md:shadow-none mb-4 object-cover;
+}
+#description-country{
+    @apply flex xs:flex-col md:flex-row xs:gap-y-8 md:gap-x-6 md:gap-y-4;
+    @apply xs:text-sm xs:mb-4 md:mb-6 md:justify-between md:w-[90%] lg:w-[85%];
+}
+#description-country p{
+    @apply leading-loose;
+}
+#border-country-parent{
+    @apply flex flex-row flex-wrap mb-4 md:w-[95%];
+}
+#border-country-parent p{
+    @apply text-pretty pl-[20px];
+}
+#border-country-parent strong{
+    @apply xs:w-full md:w-auto xs:mb-2 grid place-items-center;
+}
+#main-description{
+    @apply md:w-[120%] lg:w-[130%] lg:px-20;
+}
+#main-content a{
+    @apply w-[30px] h-[30px] fixed bottom-0 left-0 m-1 md:hidden shadow-md xs:grid xs:place-items-center;
+}
+.color-darker{
+    filter: invert(1) brightness(1.2);
+}
+
