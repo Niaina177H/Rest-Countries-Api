@@ -40,7 +40,7 @@ function MainSection({theme}: {theme: any}){
         <SearchContainer search={data} setter={setData} theme={theme}/>
         <CardContainer data={tempdata} theme={theme} setter={setDetail}/>
         {
-            detail && <Details objet={detail} reset={setDetail} theme={theme} data={tempdata}/>
+                detail && <Details objet={detail} reset={setDetail} theme={theme} data={data}/>
         }
         <Link href="#search-interactive"><i><img src="/icon-up.png" alt="up" className={classe}/></i></Link>
     </div>

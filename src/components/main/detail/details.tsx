@@ -56,7 +56,7 @@ export default Details
 function BtnCountrie({liste, setter, bordername, theme}: {liste: any, setter: any, bordername: any, theme: any}){
     let data = bordername.filter((item: any)=>{
         return liste.includes(item.alpha3Code)
-    })
+    });
     return <>
         {
             data.map((i: any, index: number)=>{

@@ -6,7 +6,7 @@ function Card({theme, infos, setter}: {theme: any, infos: any, setter: any}){
                 setter(infos);
             }}
         >
-        <Image alt={infos.name + "flag"} src={infos.flag} width={180} height={115} className="text-inherit"/>
+        <Image alt={infos.name + " flag"} src={infos.flag} width={180} height={115} className="text-inherit"/>
         <div className="card-description">
             <h2 className="text-lg mb-2">{infos.name}</h2>
             <p><strong>Population</strong>: {infos.population}</p>
