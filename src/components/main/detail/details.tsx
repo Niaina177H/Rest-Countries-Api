@@ -29,16 +29,19 @@ function Details({objet, reset, theme, data}: {objet: any, reset: any, theme: an
                                 objet.subRegion ? objet.subRegion : <i>Aucun</i>
                             }
                         </p>
-                        <p><strong>Capital: </strong>{objet.capital[0]}</p>
+                        <p><strong>Capital: </strong>{
+                            objet.capital ? objet.capital[0] : <i>Aucun</i>
+                        }
+                        </p>
                     </div>
                     <div id="second-information">
                         <p><strong>Top Level Domain: </strong>{objet.topLevelDomain}</p>
                         <p><strong>Currencies: </strong>{
-                                ObjectToString(objet.currencies)
+                                objet.currencies ? ObjectToString(objet.currencies) : <i>Aucun</i>
                             }
                         </p>
                         <p><strong>Languages: </strong>{
-                                ObjectToString(objet.languages)
+                                objet.languages ? ObjectToString(objet.languages) : <i>Aucun</i>
                             }
                         </p>
                     </div>

@@ -18,13 +18,13 @@ function MainSection({theme}: {theme: any}){
             return {name: item.name.common, 
                 population: FormatPopulation(item.population), 
                 region: item.region, 
-                capital: item.capital, 
+                capital: item.capital ? item.capital : '', 
                 flag: item.flags.svg, 
                 nativeName: item.name.official,
                 subRegion: item.subregion ? item.subregion : '', 
                 borders: item.borders ? item.borders : '', 
                 currencies: item.currencies ? item.currencies : '', 
-                languages: item.languages, 
+                languages: item.languages ? item.languages : '', 
                 topLevelDomain: item.tld ? item.tld[0] : '', 
                 alpha3Code: item.cca3
             }

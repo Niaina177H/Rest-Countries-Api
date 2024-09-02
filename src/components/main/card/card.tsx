@@ -4,6 +4,7 @@ function Card({theme, infos, setter}: {theme: any, infos: any, setter: any}){
     return <div className={"shadow-lg rounded-md cursor-pointer card-items "+theme}
             onClick={(): void=>{
                 setter(infos);
+                
             }}
         >
         <Image alt={infos.name + " flag"} src={infos.flag} width={180} height={115} className="text-inherit"/>
@@ -11,7 +12,7 @@ function Card({theme, infos, setter}: {theme: any, infos: any, setter: any}){
             <h2 className="text-lg mb-2">{infos.name}</h2>
             <p><strong>Population</strong>: {infos.population}</p>
             <p><strong>Region</strong>: {infos.region}</p>
-            <p><strong>Capital</strong>: {infos.capital}</p>
+            <p><strong>Capital</strong>: {infos.capital ? infos.capital : <i>Aucun</i>}</p>
         </div>
     </div>
 }

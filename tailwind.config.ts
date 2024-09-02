@@ -22,7 +22,7 @@ const config: Config = {
         base: '100px'
       },
       height: {
-        'md-auto': "calc(100% - 55px)"
+        'md-auto': "calc(100% - 55px)",
       },
       colors: {
         'vuejs': "hsl(360, 90%, 50%)"
