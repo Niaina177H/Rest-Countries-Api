@@ -22,7 +22,7 @@ const config: Config = {
         base: '100px'
       },
       height: {
-        'md-auto': "calc(100% - 55px)",
+        'md-auto': "calc(100vh - 55px)",
       },
       colors: {
         'vuejs': "hsl(360, 90%, 50%)"
@@ -48,6 +48,10 @@ const config: Config = {
       boxShadow: {
         'forall': '0px 1px 6px rgba(100, 100, 100, .4)'
       },
+      borderColor: {
+        "lighter": "hsl(209, 23%, 22%)",
+        "darker": "hsl(0, 0%, 98%)"
+      }
     },
   },
   plugins: [],

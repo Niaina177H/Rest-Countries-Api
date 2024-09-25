@@ -4,12 +4,11 @@ function Card({theme, infos, setter}: {theme: any, infos: any, setter: any}){
     return <div className={"shadow-lg rounded-md cursor-pointer card-items "+theme}
             onClick={(): void=>{
                 setter(infos);
-                
             }}
         >
         <Image alt={infos.name + " flag"} src={infos.flag} width={180} height={115} className="text-inherit"/>
         <div className="card-description">
-            <h2 className="text-lg mb-2">{infos.name}</h2>
+            <h2 className="text-lg mb-2 -ml-4">{infos.name}</h2>
             <p><strong>Population</strong>: {infos.population}</p>
             <p><strong>Region</strong>: {infos.region}</p>
             <p><strong>Capital</strong>: {infos.capital ? infos.capital : <i>Aucun</i>}</p>
@@ -27,4 +26,12 @@ export function FormatPopulation(nbpopulation: any): string{
         return item
     })
     return nbformat.reverse().join('')
+}
+
+export function CardSkeleton(theme: any){
+    return <div
+        className="w-full h-md-auto justify-center items-center"
+    >  
+        <div className={`rounded-full animate-spin border-4 border-b-0 border-t-0 h-[80px] w-[86px] border-${theme.theme}`}></div>
+    </div>
 }

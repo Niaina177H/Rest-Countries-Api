@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import CardContainer from "./card/cardcontainer";
 import SearchContainer from "./search/searchcontainer";
-import { FormatPopulation } from "./card/card";
+import { CardSkeleton, FormatPopulation } from "./card/card";
 import Details from "./detail/details";
 import Link from "next/link";
+import { Suspense } from "react";
 
 function MainSection({theme}: {theme: any}){
     const [tempdata, setData] = useState([]);
@@ -38,7 +39,12 @@ function MainSection({theme}: {theme: any}){
     let classe = theme.includes("darker") ? 'color-darker' : '';
     return <div id="main-content" ref={refmain}>
         <SearchContainer search={data} setter={setData} theme={theme}/>
-        <CardContainer data={tempdata} theme={theme} setter={setDetail}/>
+        <Suspense fallback={
+            <CardSkeleton theme={theme} />
+        }>
+            <CardContainer data={tempdata} theme={theme} setter={setDetail}/>
+        </Suspense>
+
         {
                 detail && <Details objet={detail} reset={setDetail} theme={theme} data={data}/>
         }
