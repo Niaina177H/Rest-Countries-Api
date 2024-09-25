@@ -1,4 +1,4 @@
-import Card, { CardSkeleton } from "./card";
+import Card from "./card";
 import db from '@/data/data.json';
 
 const dbs: any = db
@@ -9,10 +9,10 @@ function CardContainer({data, theme, setter}: {data: any, theme: any, setter: an
         {
             data.map((item: any)=>{
                 return <Card 
-                    theme={bgthis}
                     infos={item}
+                    theme={bgthis}
+                    key={data.indexOf(item)}
                     setter={setter}
-                    key={item.population}
                 />
             })
         }
